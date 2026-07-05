@@ -136,12 +136,7 @@ export default function CongoMarujoPage() {
                   "O terno passou a sair com farda composta por calça, camisa, lenço e chapéu, preservando sua identidade própria dentro da Congada.",
                 ],
                 [
-                  "2017",
-                  "Registro de apresentação do Congo Marujo em frente à Igreja do Rosário, na Festa de Nossa Senhora do Rosário.",
-                ],
-                [
-                  "2019",
-                  "Registro de apresentação do Congo Marujo em frente à Igreja do Rosário, durante a festa daquele ano.",
+                  
                 ],
               ].map(([ano, texto]) => (
                 <div
