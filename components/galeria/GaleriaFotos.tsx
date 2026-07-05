@@ -87,13 +87,13 @@ export default function GaleriaFotos() {
             </h2>
           </div>
 
-          <div className="sticky top-24 z-30 mt-10 flex flex-wrap justify-center gap-3 rounded-3xl border border-white/10 bg-[#06162D]/85 p-4 backdrop-blur-xl">
+          <div className="sticky top-24 z-30 mt-10 flex flex-wrap justify-center gap-4 rounded-3xl border border-white/10 bg-[#06162D]/85 p-5 backdrop-blur-xl">
             {albuns.map((album) => (
               <button
                 key={album.id}
                 type="button"
                 onClick={() => setAlbumAtivo(album)}
-                className={`rounded-full border px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] transition ${
+                className={`rounded-full border px-9 py-5 text-base font-extrabold uppercase tracking-[0.16em] transition md:px-12 md:py-6 md:text-xl ${
                   albumAtivo.id === album.id
                     ? "border-[#C7A14F] bg-[#C7A14F] text-[#06162D]"
                     : "border-white/15 bg-white/5 text-white/80 hover:border-[#C7A14F] hover:text-[#E7C77A]"
