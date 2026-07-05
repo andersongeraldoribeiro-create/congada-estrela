@@ -14,13 +14,13 @@ export default function OrigemCongada() {
           <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-start">
             <div className="rounded-[2rem] bg-[#F5EFE4] p-8">
               <h3 className="text-3xl text-[#1D3D73]">
-                Rosário, São Benedito e Santa Efigênia
+                Nossa Senhora do Rosário, São Benedito e Santa Efigênia
               </h3>
 
               <p className="mt-5 text-lg leading-8 text-gray-700">
                 A Congada estrelense se organiza em torno da devoção aos santos
                 protetores ligados à tradição do Congado: Nossa Senhora do
-                Rosário, São Benedito e Santa Efigênia.
+                 Rosário, São Benedito e Santa Efigênia.
               </p>
             </div>
 

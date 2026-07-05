@@ -5,54 +5,63 @@ const ternos = [
   {
     nome: "Moçambique",
     href: "/ternos/mocambique",
+    imagem: "/images/ternos/mocambique/capa.jpg",
     resumo:
       "Terno de grande importância na Congada de Estrela do Indaiá, com presença marcante na estrutura ritual, musical e devocional da festa.",
   },
   {
     nome: "Congo Catupé",
     href: "/ternos/congo-catupe",
+    imagem: "/images/ternos/congo-catupe/capa.jpg",
     resumo:
       "Terno tradicional da Congada de Estrela do Indaiá, integrante da formação atual da festa e guardião de memórias, cantos e devoções.",
   },
   {
     nome: "Congo Real Penacho",
     href: "/ternos/congo-real-penacho",
+    imagem: "/images/ternos/congo-real-penacho/capa.jpg",
     resumo:
       "Terno marcado pela tradição do Penacho, com danças vibrantes, combates simbólicos e instrumentos como sanfona, caixa, violão, pandeiro e cavaquinho.",
   },
   {
     nome: "Contra-Dança",
     href: "/ternos/contra-danca",
+    imagem: "/images/ternos/contra-danca/capa.jpg",
     resumo:
       "Fundado em 1920, o Contra-Dança possui função lúdica na festa, com coreografias, trança-fitas, movimentos próprios e forte presença cênica nos cortejos.",
   },
   {
     nome: "Congo Sereno",
     href: "/ternos/congo-sereno",
+    imagem: "/images/ternos/congo-sereno/capa.jpg",
     resumo:
       "Criado em 1986 por iniciativa de José Hamilton de Faria, o Congo Sereno canta louvores a Nossa Senhora e utiliza instrumentos como caixa, tarol, pandeiro e sanfona.",
   },
   {
     nome: "Estrela-de-Ouro",
     href: "/ternos/estrela-de-ouro",
+    imagem: "/images/ternos/estrela-de-ouro/capa.jpg",
     resumo:
       "Criado em 1988 por iniciativa de Laura Veloso Ribeiro, surgiu como terno feminino e representa um marco da participação das mulheres na Congada.",
   },
   {
     nome: "Congo Pena Verde",
     href: "/ternos/congo-pena-verde",
+    imagem: "/images/ternos/congo-pena-verde/capa.jpg",
     resumo:
       "Fundado em 1988 por Maria Helena Pereira, tem o verde como referência simbólica e preserva cantos próprios dedicados aos santos da festa.",
   },
   {
     nome: "Congo Marujo",
     href: "/ternos/congo-marujo",
+    imagem: "/images/ternos/congo-marujo/capa.jpg",
     resumo:
       "Fundado em 2004 por Jânio Antunes Cardoso, o Congo Marujo utiliza calça, camisa, lenço e chapéu, com instrumentos como caixa, pandeiro e tarol.",
   },
   {
     nome: "Penacho de São Sebastião",
     href: "/ternos/penacho-sao-sebastiao",
+    imagem: "/images/ternos/penacho-sao-sebastiao/capa.jpg",
     resumo:
       "Terno da formação atual da Congada de Estrela do Indaiá, surgido de forma independente. Saiu pela primeira vez em 2019 e participa dos cortejos e celebrações da festa.",
   },
@@ -119,18 +128,34 @@ export default function HeroTernos() {
               <Link
                 key={terno.href}
                 href={terno.href}
-                className="group relative flex h-full min-h-[430px] flex-col rounded-[2rem] border border-white/10 bg-[#10233F]/90 p-8 shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[#C7A14F]/80 hover:bg-[#10233F] md:p-9"
+                className="group relative flex h-full min-h-[560px] flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-[#10233F]/90 shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[#C7A14F]/80 hover:bg-[#10233F]"
               >
-                <div className="absolute inset-x-8 top-0 h-[3px] rounded-full bg-gradient-to-r from-[#C7A14F] via-[#E7C77A] to-transparent md:inset-x-9" />
+                <div className="relative h-72 w-full overflow-hidden bg-[#06162D]">
+                  <Image
+                    src={terno.imagem}
+                    alt={terno.nome}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
 
-                <span className="mb-6 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#C7A14F]/70 bg-[#06162D] text-lg font-bold text-[#E7C77A] shadow-lg">
-                  {index + 1}
-                </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06162D]/95 via-[#06162D]/30 to-black/10" />
 
-                <div className="flex flex-1 flex-col">
+                  <span className="absolute left-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-[#C7A14F]/80 bg-[#06162D]/85 text-lg font-bold text-[#E7C77A] shadow-lg backdrop-blur-sm">
+                    {index + 1}
+                  </span>
+
+                  <span className="absolute bottom-6 left-6 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-white/85 backdrop-blur-md">
+                    Terno
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col p-8 md:p-9">
                   <h3 className="text-2xl font-bold leading-tight text-white transition group-hover:text-[#E7C77A] md:text-3xl">
                     {terno.nome}
                   </h3>
+
+                  <div className="mt-6 h-[2px] w-20 rounded-full bg-[#C7A14F]" />
 
                   <p className="mt-7 flex-1 text-base leading-8 text-white/75">
                     {terno.resumo}
