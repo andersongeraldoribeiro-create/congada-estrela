@@ -31,6 +31,15 @@ export default function Header() {
   const subtitleColor =
     scrolled || menuAberto ? "text-gray-600" : "text-white/80";
 
+  const menuItems = [
+    { nome: "Início", href: "/" },
+    { nome: "História", href: "/historia" },
+    { nome: "Ternos", href: "/ternos" },
+    { nome: "Galeria", href: "/galeria" },
+    { nome: "Comissão", href: "/comissao" },
+    { nome: "Contato", href: "/contato" },
+  ];
+
   return (
     <>
       <header
@@ -72,49 +81,18 @@ export default function Header() {
 
           <nav className="hidden md:block">
             <ul
-              className={`flex items-center gap-10 text-sm font-semibold uppercase tracking-wider transition-colors duration-300 ${menuColor}`}
+              className={`flex items-center gap-8 text-sm font-semibold uppercase tracking-wider transition-colors duration-300 ${menuColor}`}
             >
-              <li>
-                <Link href="/" className="transition hover:text-[#C7A14F]">
-                  Início
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/historia"
-                  className="transition hover:text-[#C7A14F]"
-                >
-                  História
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/ternos"
-                  className="transition hover:text-[#C7A14F]"
-                >
-                  Ternos
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/galeria"
-                  className="transition hover:text-[#C7A14F]"
-                >
-                  Galeria
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/contato"
-                  className="transition hover:text-[#C7A14F]"
-                >
-                  Contato
-                </Link>
-              </li>
+              {menuItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="transition hover:text-[#C7A14F]"
+                  >
+                    {item.nome}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -166,60 +144,18 @@ export default function Header() {
 
             <nav className="mt-10">
               <ul className="flex flex-col gap-5">
-                <li>
-                  <Link
-                    href="/"
-                    onClick={() => setMenuAberto(false)}
-                    className="group block text-3xl font-bold text-white transition hover:text-[#E7C77A]"
-                  >
-                    Início
-                    <span className="mx-auto mt-3 block h-px w-0 bg-[#C7A14F] transition-all duration-300 group-hover:w-20" />
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/historia"
-                    onClick={() => setMenuAberto(false)}
-                    className="group block text-3xl font-bold text-white transition hover:text-[#E7C77A]"
-                  >
-                    História
-                    <span className="mx-auto mt-3 block h-px w-0 bg-[#C7A14F] transition-all duration-300 group-hover:w-20" />
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/ternos"
-                    onClick={() => setMenuAberto(false)}
-                    className="group block text-3xl font-bold text-white transition hover:text-[#E7C77A]"
-                  >
-                    Ternos
-                    <span className="mx-auto mt-3 block h-px w-0 bg-[#C7A14F] transition-all duration-300 group-hover:w-20" />
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/galeria"
-                    onClick={() => setMenuAberto(false)}
-                    className="group block text-3xl font-bold text-white transition hover:text-[#E7C77A]"
-                  >
-                    Galeria
-                    <span className="mx-auto mt-3 block h-px w-0 bg-[#C7A14F] transition-all duration-300 group-hover:w-20" />
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/contato"
-                    onClick={() => setMenuAberto(false)}
-                    className="group block text-3xl font-bold text-white transition hover:text-[#E7C77A]"
-                  >
-                    Contato
-                    <span className="mx-auto mt-3 block h-px w-0 bg-[#C7A14F] transition-all duration-300 group-hover:w-20" />
-                  </Link>
-                </li>
+                {menuItems.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setMenuAberto(false)}
+                      className="group block text-3xl font-bold text-white transition hover:text-[#E7C77A]"
+                    >
+                      {item.nome}
+                      <span className="mx-auto mt-3 block h-px w-0 bg-[#C7A14F] transition-all duration-300 group-hover:w-20" />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
 
