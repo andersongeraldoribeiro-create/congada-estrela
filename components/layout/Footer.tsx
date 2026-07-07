@@ -76,9 +76,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-8 text-center text-sm text-white/50">
-          © {new Date().getFullYear()} Congada de Estrela do Indaiá. Todos os
-          direitos reservados.
+        <div className="mt-16 border-t border-white/10 pt-8 text-center">
+          <p className="text-sm text-white/50">
+            © {new Date().getFullYear()} Congada de Estrela do Indaiá. Todos os
+            direitos reservados.
+          </p>
+
+          <p className="mt-3 text-sm text-white/40">
+            Desenvolvido por{" "}
+            <a
+              href="https://wa.me/553784096932"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-[#C7A14F] transition-colors duration-300 hover:text-white"
+            >
+              Anderson Ribeiro
+            </a>
+          </p>
         </div>
       </div>
     </footer>
