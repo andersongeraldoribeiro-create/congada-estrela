@@ -140,7 +140,6 @@ export default function ContatoPage() {
       />
       <Header />
 
-
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -172,7 +171,10 @@ export default function ContatoPage() {
               <p style={eyebrow}>Contato e colaboração</p>
               <h1 style={title}>Ajude a preservar a memória da Congada</h1>
               <p style={subtitle}>
-                Este portal reúne registros, histórias e referências sobre a Congada de Estrela do Indaiá. Sua colaboração pode ajudar a guardar fotografias, documentos e relatos ligados à Festa do Rosário e à tradição congadeira.
+                Este portal reúne registros, histórias e referências sobre a
+                Congada de Estrela do Indaiá. Sua colaboração pode ajudar a
+                guardar fotografias, documentos e relatos ligados à Festa do
+                Rosário e à tradição congadeira.
               </p>
 
               <div
@@ -187,11 +189,16 @@ export default function ContatoPage() {
                 <a href="mailto:100anosrosario@gmail.com" style={button}>
                   Enviar material por e-mail
                 </a>
+
                 <Link
                   href="https://www.instagram.com/festadorosario_estrela/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ ...button, background: "#FFFFFF", border: "1px solid #C99736" }}
+                  style={{
+                    ...button,
+                    background: "#FFFFFF",
+                    border: "1px solid #C99736",
+                  }}
                 >
                   Abrir Instagram oficial
                 </Link>
@@ -203,7 +210,13 @@ export default function ContatoPage() {
         <section style={section}>
           <div style={wrap}>
             <p style={eyebrow}>Como apoiar</p>
-            <h2 style={{ ...title, maxWidth: "780px", fontSize: "clamp(26px, 3vw, 38px)" }}>
+            <h2
+              style={{
+                ...title,
+                maxWidth: "780px",
+                fontSize: "clamp(26px, 3vw, 38px)",
+              }}
+            >
               Toda colaboração ajuda a manter esta história viva
             </h2>
 
@@ -216,8 +229,13 @@ export default function ContatoPage() {
               }}
             >
               {apoio.map((item) => (
-                <article key={item.numero} style={{ ...card, minHeight: "240px" }}>
-                  <p style={{ ...eyebrow, letterSpacing: "0.12em" }}>{item.numero}</p>
+                <article
+                  key={item.numero}
+                  style={{ ...card, minHeight: "240px" }}
+                >
+                  <p style={{ ...eyebrow, letterSpacing: "0.12em" }}>
+                    {item.numero}
+                  </p>
                   <h3 style={cardTitle}>{item.titulo}</h3>
                   <p style={text}>{item.texto}</p>
                 </article>
@@ -241,12 +259,28 @@ export default function ContatoPage() {
               }}
             >
               <div style={{ minWidth: 0 }}>
-                <p style={{ ...eyebrow, color: "#D9AD58" }}>Apoie este projeto</p>
-                <h2 style={{ ...title, color: "#FFFFFF", fontSize: "clamp(28px, 3.8vw, 44px)" }}>
+                <p style={{ ...eyebrow, color: "#D9AD58" }}>
+                  Apoie este projeto
+                </p>
+                <h2
+                  style={{
+                    ...title,
+                    color: "#FFFFFF",
+                    fontSize: "clamp(28px, 3.8vw, 44px)",
+                  }}
+                >
                   Sua ajuda mantém esta história viva
                 </h2>
-                <p style={{ ...text, color: "rgba(255,255,255,0.88)", maxWidth: "640px" }}>
-                  A contribuição da comunidade ajuda na manutenção do portal, na organização de registros, na preservação de fotografias e na divulgação da história da Congada de Estrela do Indaiá.
+                <p
+                  style={{
+                    ...text,
+                    color: "rgba(255,255,255,0.88)",
+                    maxWidth: "640px",
+                  }}
+                >
+                  A contribuição da comunidade ajuda na manutenção do portal,
+                  na organização de registros, na preservação de fotografias e
+                  na divulgação da história da Congada de Estrela do Indaiá.
                 </p>
               </div>
 
@@ -257,8 +291,16 @@ export default function ContatoPage() {
                   borderColor: "rgba(255,255,255,0.18)",
                 }}
               >
-                <p style={{ ...text, marginTop: 0, color: "rgba(255,255,255,0.9)" }}>
-                  Para colaborar com materiais, relatos ou informações, entre em contato pelo e-mail do projeto ou acompanhe as publicações no Instagram oficial da Festa do Rosário.
+                <p
+                  style={{
+                    ...text,
+                    marginTop: 0,
+                    color: "rgba(255,255,255,0.9)",
+                  }}
+                >
+                  Para colaborar com materiais, relatos ou informações, entre
+                  em contato pelo e-mail do projeto ou acompanhe as publicações
+                  no Instagram oficial da Festa do Rosário.
                 </p>
               </div>
             </div>
@@ -276,22 +318,42 @@ export default function ContatoPage() {
           >
             <article style={card}>
               <p style={eyebrow}>Envio de fotos</p>
-              <h2 style={cardTitle}>Envie fotografias, documentos e histórias</h2>
+              <h2 style={cardTitle}>
+                Envie fotografias, documentos e histórias
+              </h2>
               <p style={text}>
-                Possui fotografias antigas, vídeos, documentos ou relatos sobre a Congada de Estrela do Indaiá? Sua colaboração pode ajudar a ampliar o acervo histórico deste portal.
+                Possui fotografias antigas, vídeos, documentos ou relatos sobre
+                a Congada de Estrela do Indaiá? Sua colaboração pode ajudar a
+                ampliar o acervo histórico deste portal.
               </p>
-              <div style={{ marginTop: "22px" }}>
+
+              <div
+                style={{
+                  marginTop: "22px",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "12px",
+                }}
+              >
                 <a href="mailto:100anosrosario@gmail.com" style={button}>
                   100anosrosario@gmail.com
                 </a>
               </div>
             </article>
 
-            <article style={{ ...card, background: "#EEF4FB", borderColor: "#CAD5E2" }}>
+            <article
+              style={{
+                ...card,
+                background: "#EEF4FB",
+                borderColor: "#CAD5E2",
+              }}
+            >
               <p style={eyebrow}>Instagram oficial</p>
               <h2 style={cardTitle}>Acompanhe a Festa do Rosário</h2>
               <p style={text}>
-                Siga o perfil oficial para acompanhar fotografias, novidades, registros da festa e conteúdos ligados à Congada de Estrela do Indaiá.
+                Siga o perfil oficial para acompanhar fotografias, novidades,
+                registros da festa e conteúdos ligados à Congada de Estrela do
+                Indaiá.
               </p>
               <div style={{ marginTop: "22px" }}>
                 <Link
@@ -307,11 +369,217 @@ export default function ContatoPage() {
           </div>
         </section>
 
-        <section style={{ ...section, paddingBottom: "56px" }}>
+        <section style={{ ...section, paddingTop: "0", paddingBottom: "64px" }}>
           <div style={wrap}>
-            <div style={{ ...card, textAlign: "center", padding: "34px 24px" }}>
-              <p style={eyebrow}>Obrigado pelo apoio</p>
-              <h2 style={{ ...title, fontSize: "clamp(26px, 3.4vw, 40px)" }}>
+            <div
+              style={{
+                ...card,
+                maxWidth: "1080px",
+                margin: "0 auto",
+                padding: "36px 32px",
+              }}
+            >
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "minmax(0, 1.35fr) minmax(280px, 0.65fr)",
+                  gap: "34px",
+                  alignItems: "stretch",
+                }}
+              >
+                <div style={{ minWidth: 0 }}>
+                  <p style={eyebrow}>Entre em contato</p>
+
+                  <h2
+                    style={{
+                      ...title,
+                      fontSize: "clamp(28px, 3vw, 38px)",
+                    }}
+                  >
+                    Ajude a preservar a memória da Congada
+                  </h2>
+
+                  <p style={text}>
+                    A construção deste portal é um trabalho contínuo de
+                    preservação da memória da Congada de Estrela do Indaiá.
+                    Muitas fotografias, documentos e relatos permanecem
+                    guardados em arquivos pessoais e álbuns de família.
+                    Compartilhar esse material contribui para ampliar o
+                    registro histórico e preservar a trajetória da Festa do
+                    Rosário para as futuras gerações.
+                  </p>
+
+                  <p style={text}>
+                    Se você possui fotografias antigas, vídeos, documentos,
+                    programas de festas, informações sobre os ternos, relatos
+                    familiares ou qualquer outro registro relacionado à Congada,
+                    sua colaboração será muito bem-vinda. Todo o material
+                    recebido será analisado e poderá integrar o acervo digital do
+                    projeto, sempre com o devido reconhecimento da colaboração,
+                    quando autorizado.
+                  </p>
+
+                  <div
+                    style={{
+                      marginTop: "28px",
+                      paddingTop: "24px",
+                      borderTop: "1px solid #E5D7B5",
+                    }}
+                  >
+                    <p style={{ ...eyebrow, marginBottom: "8px" }}>
+                      Contato institucional
+                    </p>
+
+                    <h3
+                      style={{
+                        margin: 0,
+                        fontFamily: "Georgia, serif",
+                        fontSize: "30px",
+                        lineHeight: "1.2",
+                        color: "#061A34",
+                      }}
+                    >
+                      Fernando Wallison Sousa
+                    </h3>
+
+                    <p
+                      style={{
+                        marginTop: "8px",
+                        marginBottom: 0,
+                        fontFamily: "Arial, sans-serif",
+                        fontSize: "17px",
+                        fontWeight: 700,
+                        color: "#B67C23",
+                        lineHeight: "1.6",
+                      }}
+                    >
+                      Presidente da Irmandade de Nossa Senhora do Rosário de
+                      Estrela do Indaiá
+                    </p>
+
+                    <p style={text}>
+                      Para esclarecer dúvidas, enviar fotografias, documentos,
+                      vídeos, relatos, registros históricos ou qualquer outro
+                      material relacionado à Congada e à Festa do Rosário, entre
+                      em contato pelo WhatsApp. Sua colaboração contribui para
+                      preservar e ampliar o acervo histórico deste portal.
+                    </p>
+
+                    <a
+                      href="https://wa.me/553788356837"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        ...button,
+                        marginTop: "12px",
+                        background: "#25D366",
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      WhatsApp • +55 37 8835-6837
+                    </a>
+                  </div>
+                </div>
+
+                <aside
+                  style={{
+                    boxSizing: "border-box",
+                    border: "1px solid #E5D7B5",
+                    borderRadius: "22px",
+                    background: "#FFFDF8",
+                    padding: "28px 24px",
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    minWidth: 0,
+                  }}
+                >
+                  <p style={{ ...eyebrow, marginBottom: "10px" }}>
+                    Apoie nossa cultura
+                  </p>
+
+                  <h3
+                    style={{
+                      margin: "0 0 12px",
+                      fontFamily: "Georgia, serif",
+                      fontSize: "clamp(26px, 3vw, 34px)",
+                      lineHeight: "1.12",
+                      color: "#061A34",
+                    }}
+                  >
+                    Contribua com este projeto
+                  </h3>
+
+                  <p
+                    style={{
+                      ...text,
+                      marginTop: 0,
+                      fontSize: "15px",
+                      lineHeight: "1.65",
+                    }}
+                  >
+                    Sua doação ajuda a manter este portal, preservar documentos,
+                    fotografias e registros históricos, fortalecendo a memória
+                    da Congada de Estrela do Indaiá para as futuras gerações.
+                  </p>
+
+                  <img
+                    src="/images/pix-qrcode.png"
+                    alt="QR Code PIX para apoiar a cultura da Congada"
+                    style={{
+                      width: "220px",
+                      maxWidth: "100%",
+                      display: "block",
+                      margin: "20px auto 14px",
+                      borderRadius: "14px",
+                      border: "1px solid #E5D7B5",
+                      background: "#FFFFFF",
+                      padding: "10px",
+                      boxSizing: "border-box",
+                    }}
+                  />
+
+                  <p
+                    style={{
+                      margin: 0,
+                      fontFamily: "Arial, sans-serif",
+                      fontSize: "14px",
+                      lineHeight: "1.55",
+                      color: "#5F6B7A",
+                    }}
+                  >
+                    Escaneie o QR Code com o aplicativo do seu banco e contribua
+                    com qualquer valor.
+                  </p>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ ...section, paddingTop: "0", paddingBottom: "56px" }}>
+          <div style={wrap}>
+            <div
+              style={{
+                ...card,
+                background: "#061A34",
+                borderColor: "#061A34",
+                textAlign: "center",
+                padding: "34px 24px",
+              }}
+            >
+              <p style={{ ...eyebrow, color: "#D9AD58" }}>
+                Obrigado pelo apoio
+              </p>
+              <h2
+                style={{
+                  ...title,
+                  color: "#FFFFFF",
+                  fontSize: "clamp(26px, 3.4vw, 40px)",
+                }}
+              >
                 Preservar a Congada é valorizar a história de Estrela do Indaiá
               </h2>
             </div>
