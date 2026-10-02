@@ -223,7 +223,7 @@ export default function ContatoPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))",
                 gap: "20px",
                 marginTop: "28px",
               }}
@@ -253,7 +253,7 @@ export default function ContatoPage() {
                 borderColor: "#061A34",
                 padding: "34px 28px",
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
                 gap: "24px",
                 alignItems: "center",
               }}
@@ -312,7 +312,7 @@ export default function ContatoPage() {
             style={{
               ...wrap,
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))",
               gap: "20px",
             }}
           >
@@ -382,7 +382,7 @@ export default function ContatoPage() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "minmax(0, 1.35fr) minmax(280px, 0.65fr)",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))",
                   gap: "34px",
                   alignItems: "stretch",
                 }}

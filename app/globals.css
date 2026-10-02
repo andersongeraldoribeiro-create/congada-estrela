@@ -120,3 +120,52 @@ img {
     font-size: 16px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Proteção global dos cards
+   Replica em todo o site o comportamento que resolveu a página de Transparência:
+   cards podem encolher dentro do grid, textos longos quebram corretamente e o
+   conteúdo não força rolagem horizontal em telas menores.
+   -------------------------------------------------------------------------- */
+.container-custom,
+.container-custom > *,
+.grid > * {
+  min-width: 0;
+}
+
+:where(article, div, a)[class*="rounded-2xl"],
+:where(article, div, a)[class*="rounded-3xl"],
+:where(article, div, a)[class*="rounded-[2rem]"] {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+:where(article, div, a)[class*="rounded-2xl"] :where(h1, h2, h3, h4, h5, h6, p, span, strong, a),
+:where(article, div, a)[class*="rounded-3xl"] :where(h1, h2, h3, h4, h5, h6, p, span, strong, a),
+:where(article, div, a)[class*="rounded-[2rem]"] :where(h1, h2, h3, h4, h5, h6, p, span, strong, a) {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+a[class*="rounded-2xl"],
+a[class*="rounded-3xl"],
+a[class*="rounded-[2rem]"] {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .container-custom {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  :where(article, div, a)[class*="rounded-2xl"],
+  :where(article, div, a)[class*="rounded-3xl"],
+  :where(article, div, a)[class*="rounded-[2rem]"] {
+    width: 100%;
+  }
+}
+

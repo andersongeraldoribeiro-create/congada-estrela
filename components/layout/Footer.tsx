@@ -50,6 +50,9 @@ export default function Footer() {
                 <Link href="/galeria">Galeria</Link>
               </li>
               <li>
+                <Link href="/transparencia">Transparência</Link>
+              </li>
+              <li>
                 <Link href="/contato">Contato</Link>
               </li>
             </ul>

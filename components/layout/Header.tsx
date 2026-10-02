@@ -37,6 +37,7 @@ export default function Header() {
     { nome: "Ternos", href: "/ternos" },
     { nome: "Galeria", href: "/galeria" },
     { nome: "Comissão", href: "/comissao" },
+    { nome: "Transparência", href: "/transparencia" },
     { nome: "Contato", href: "/contato" },
   ];
 
